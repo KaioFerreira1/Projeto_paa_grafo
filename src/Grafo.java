@@ -40,7 +40,6 @@ public class Grafo {
         }
     }
 
-    // Método para verificar ciclo usando busca em profundidade (implementado)
     public boolean verificarCiclo() {
         boolean[] visitados = new boolean[numeroVertices];
         for (int i = 0; i < numeroVertices; i++) {
@@ -58,7 +57,6 @@ public class Grafo {
 
         for (int proximoVertice : obterAdjacentes(verticeAtual)) {
             if (visitados[proximoVertice]) {
-                // Ciclo encontrado na aresta 'verticeAtual' -> 'proximoVertice'
                 return true;
             } else {
                 if (verificarCicloDFS(proximoVertice, visitados)) {
@@ -70,7 +68,6 @@ public class Grafo {
         return false;
     }
 
-    // Método auxiliar para obter os vértices adjacentes a um vértice específico (implementado)
     private List<Integer> obterAdjacentes(int vertice) {
         List<Integer> adjacentes = new ArrayList<>();
         for (int j = 0; j < numeroVertices; j++) {

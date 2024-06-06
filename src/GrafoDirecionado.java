@@ -12,7 +12,6 @@ public class GrafoDirecionado {
         this.numeroVertices = numeroVertices;
         this.listasAdjacencia = new HashMap<>();
 
-        // Inicializando as listas de adjacência
         for (int i = 0; i < numeroVertices; i++) {
             listasAdjacencia.put(i, new ArrayList<>());
         }
@@ -46,13 +45,10 @@ public class GrafoDirecionado {
         }
     }
 
-    // Método para verificar ciclo usando busca em profundidade (a ser implementado)
     public boolean verificarCiclo() {
-        // Implementar algoritmo de busca em profundidade para detecção de ciclo
-        return false; // Substituir por implementação real
+        return false;
     }
 
-    // Método auxiliar para obter os vértices adjacentes a um vértice específico (implementado)
     private List<Integer> obterAdjacentes(int vertice) {
         return listasAdjacencia.get(vertice);
     }
