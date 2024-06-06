@@ -19,7 +19,8 @@ public class GrafoDirecionado {
 
     public void adicionarAresta(int verticeOrigem, int verticeDestino) {
         if (verticeOrigem < 0 || verticeOrigem >= numeroVertices ||
-                verticeDestino < 0 || verticeDestino >= numeroVertices) {
+                verticeDestino < 0 || verticeDestino >= numeroVertices ||
+                listasAdjacencia.get(verticeDestino).contains(verticeOrigem)) {
             throw new IllegalArgumentException("Vértices inválidos");
         }
 

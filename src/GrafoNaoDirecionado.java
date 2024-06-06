@@ -1,12 +1,12 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Grafo {
+public class GrafoNaoDirecionado {
 
     private int numeroVertices;
     private int[][] matrizAdjacencia;
 
-    public Grafo(int numeroVertices) {
+    public GrafoNaoDirecionado(int numeroVertices) {
         this.numeroVertices = numeroVertices;
         this.matrizAdjacencia = new int[numeroVertices][numeroVertices];
     }
@@ -18,7 +18,7 @@ public class Grafo {
         }
 
         matrizAdjacencia[verticeOrigem][verticeDestino] = 1;
-        matrizAdjacencia[verticeDestino][verticeOrigem] = 1; // Adicionando aresta bidirecional
+        matrizAdjacencia[verticeDestino][verticeOrigem] = 1;
     }
 
     public void removerAresta(int verticeOrigem, int verticeDestino) {
@@ -28,7 +28,7 @@ public class Grafo {
         }
 
         matrizAdjacencia[verticeOrigem][verticeDestino] = 0;
-        matrizAdjacencia[verticeDestino][verticeOrigem] = 0; // Removendo aresta bidirecional
+        matrizAdjacencia[verticeDestino][verticeOrigem] = 0;
     }
 
     public void exibirGrafo() {
